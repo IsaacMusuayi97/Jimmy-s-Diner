@@ -95,10 +95,15 @@ header {
     margin-top: 5px;
 }
 
+.hidden {
+    display: none;
+}
+
 span {
     margin-left: 10px;
     font-size: 10px;
     color: #888686;
+    cursor: pointer;
 }
 
 .container-total {
