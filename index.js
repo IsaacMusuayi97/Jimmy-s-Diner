@@ -1,5 +1,7 @@
 import { menuArray } from "./data.js";
 
+let objArr = [];
+
 document.addEventListener("click", function (e) {
   if (e.target.dataset.add) {
     handleChoiceClick(parseInt(e.target.dataset.add));
@@ -17,12 +19,27 @@ function handleChoiceClick(foodId) {
     return food.id === foodId;
   })[0];
 
-  document.getElementById("container-item").innerHTML += `
-  <div class="items-div" id="items-div">
-    <div class="item" id="item1">${targetFoodObj.name}<span id="removeIre" data-remove="${targetFoodObj.id}">remove</span></div>
-    <div class="item-price">${targetFoodObj.price}</div>
-  </div>
-  `;
+  let containerItem = document.getElementById("container-item");
+  if (!objArr.map((obj) => obj.id).includes(targetFoodObj.id)) {
+    containerItem.innerHTML += `
+      <div class="items-div" id="items-div">
+        <div class="item" id="item1">${targetFoodObj.name}<span id="removeIre" data-remove="${targetFoodObj.id}">remove</span> </div>
+        <div class="item-price">${targetFoodObj.price} <span id="items-count-${targetFoodObj.id}"></span></div>
+      </div>
+      `;
+  }
+  objArr.push(targetFoodObj);
+
+  const count = objArr.filter((obj) => obj.id === targetFoodObj.id).length;
+  console.log(objArr);
+  if (count > 1) {
+    if (document.querySelector(`#items-count-${targetFoodObj.id}`)) {
+      document.querySelector(
+        `#items-count-${targetFoodObj.id}`
+      ).innerHTML = `x ${count}`;
+    }
+  }
+
   sumUp(targetFoodObj.price);
 }
 
@@ -33,7 +50,7 @@ function removeItem(itemId, span) {
   if (document.querySelectorAll(".items-div").length === 0) {
     document.getElementById("your-order-container").classList.remove("open");
   }
-  //   document.getElementById(`item-${itemId}`).classList.add("hidden");
+  objArr = objArr.filter((obj) => obj.id !== parseInt(itemId));
 }
 
 let total = 0;
