@@ -14,16 +14,31 @@
     <div class="your-order-container" id="your-order-container">
       <h1 class="title">Your order</h1>
       <div class="container-item" id="container-item"></div>
-      
+
       <hr class="line" />
       <div class="container-total">
         <div class="total-price-mention">Total price</div>
         <div class="total-price" id="total-price">$0</div>
       </div>
       <div class="container-Btn">
-        <button>Complete order</button>
+        <button id="completeOrderBtn">Complete order</button>
       </div>
     </div>
+
+    <div class="container-details" id="container-details">
+      <h1>Enter card details</h1>
+      <div class="card-details-inputs">
+        <input id="input1" placeholder="Enter your name" />
+        <input id="input2" placeholder="Enter card number" />
+        <input id="input3" placeholder="Enter  CVV" />
+      </div>
+      <div class="container-pay-btn">
+        <button id="pay">Pay</button>
+      </div>
+    </div>
+    <footer class="footer" id="footer">
+      <div class="lastMessage">Thanks! Your order is on its way!</div>
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>

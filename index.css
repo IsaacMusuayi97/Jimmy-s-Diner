@@ -36,19 +36,19 @@ header {
 }
 
 .food-name {
-    font-weight: normal;
-    font-size: 18px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .ingredients {
-    color: #888686;
+  color: #888686;
 }
 
 .price {
-    font-weight: bold;
-    margin-top: 5px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .container--add-btn {
@@ -67,64 +67,126 @@ header {
 }
 
 .your-order-container {
-    margin-top: 25px;
-    display: none;
+  margin-top: 25px;
+  display: none;
 }
 
 .open {
-    display: block;
+  display: block;
 }
 
 .title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .container-item {
-    width: 82%;
-    margin-left: 55px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  width: 82%;
+  margin-left: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .items-div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 span {
-    margin-left: 10px;
-    font-size: 10px;
-    color: #888686;
-    cursor: pointer;
+  margin-left: 10px;
+  font-size: 10px;
+  color: #888686;
+  cursor: pointer;
 }
 
 .container-total {
-    width: 82%;
-    margin-top: 8px;
-    margin-left: 55px;
-    display: flex;
-    justify-content: space-between;
+  width: 82%;
+  margin-top: 8px;
+  margin-left: 55px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-Btn {
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 30px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-.container-Btn  button {
-    width: 88%;
-    padding: 10px 0;
-    background-color: #00fe93;
-    color: black;
-    font-weight: bold;
-    border: none;
+.container-Btn button {
+  width: 88%;
+  padding: 10px 0;
+  background-color: #00fe93;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+.container-details {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  height: 420px;
+  width: 450px;
+  box-shadow: 0px 0px 6px 2px #666;
+  display: none;
+}
+
+.container-details h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.card-details-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-details-inputs input {
+  width: 400px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-indent: 10px;
+  outline: none;
+}
+
+.container-pay-btn button {
+  width: 405px;
+  height: 50px;
+  margin-left: 10px;
+  margin-top: 20px;
+  background-color: #00fe93;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+}
+
+.lastMessage {
+  width: 85%;
+  margin-left: 38px;
+  margin-top: 40px;
+  font-size: 22px;
+  height: 50px;
+  background-color: #e9fff5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: none;
 }
