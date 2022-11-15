@@ -39,12 +39,9 @@ function removeItem(itemId, span) {
   grandParent.remove();
   if (document.querySelectorAll(".items-div").length === 0) {
     document.getElementById("your-order-container").classList.remove("open");
+    location.reload()
   }
 
-//  menuArray.forEach(function (item) {
-//   console.log(item.price, 'start')
-//  })
-console.log(menuArray, itemId);
 const targetArray = menuArray.filter(function (item) {
   return item.id === parseInt(itemId)
  })[0]
